@@ -4,6 +4,10 @@ Ubuntu 14.04 docker image loaded with:
 - wget
 - git
 - python 3.4
-- node (latest)
+- nodejs (latest)
+- npm (latest)
+- grunt (latest)
+- gulp (latest)
 - bower (latest)
 - ruby 2.2.2
+- PhantomJS (latest)

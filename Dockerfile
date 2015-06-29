@@ -47,10 +47,8 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     python-virtualenv
 RUN curl -sL https://deb.nodesource.com/setup | bash -
-RUN apt-get install -y \
-    nodejs
-RUN npm install -g npm && \
-    npm install -g grunt-cli bower phantomjs
+RUN apt-get install -y nodejs
+RUN npm install -g npm
 RUN curl -O http://ftp.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.gz && \
     tar -zxvf ruby-2.2.2.tar.gz && \
     cd ruby-2.2.2 && \
@@ -60,3 +58,4 @@ RUN curl -O http://ftp.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.gz && \
     cd .. && \
     rm -r ruby-2.2.2 ruby-2.2.2.tar.gz && \
     echo 'gem: --no-document' > /usr/local/etc/gemrc
+RUN npm install -g grunt-cli bower phantomjs

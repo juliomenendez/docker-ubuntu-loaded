@@ -36,7 +36,8 @@ RUN apt-get update && apt-get install -y \
 RUN curl -sL https://deb.nodesource.com/setup | bash -
 RUN apt-get install -y \
     nodejs
-RUN npm install -g grunt-cli bower
+RUN npm install -g npm && \
+    npm install -g grunt-cli bower
 RUN curl -O http://ftp.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.gz && \
     tar -zxvf ruby-2.2.2.tar.gz && \
     cd ruby-2.2.2 && \

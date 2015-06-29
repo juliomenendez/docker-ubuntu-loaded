@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     ca-certificates \
     wget \
+    unzip \
     build-essential \
     libcurl4-openssl-dev \
     libffi-dev \
@@ -58,4 +59,8 @@ RUN curl -O http://ftp.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.gz && \
     cd .. && \
     rm -r ruby-2.2.2 ruby-2.2.2.tar.gz && \
     echo 'gem: --no-document' > /usr/local/etc/gemrc
-RUN npm install -g grunt-cli gulp bower phantomjs
+RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2 && \
+    tar xjvf phantomjs-1.9.8-linux-x86_64.tar.bz2 && \
+    mv phantomjs-1.9.8-linux-x86_64 /usr/local/share && \
+    ln -sf /usr/local/share/phantomjs-1.9.8-linux-x86_64/bin/phantomjs /usr/local/bin
+RUN npm install -g grunt-cli gulp bower coffee-script

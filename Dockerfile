@@ -27,6 +27,19 @@ RUN apt-get update && apt-get install -y \
     libxslt-dev \
     libyaml-dev \
     zlib1g-dev \
+    libsqlite3-dev \
+    libfontconfig1-dev \
+    libicu-dev \
+    libfreetype6 \
+    libpng-dev \
+    libjpeg-dev \
+    libX11-dev \
+    libxext-dev \
+    g++ \
+    flex \
+    bison \
+    gperf \
+    perl \
     make \
     git \
     python3.4 \
